@@ -1,0 +1,27 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type="text/xsl" href="nutricion.xsl"?>
+
+<!--Raíz-->
+<producto>
+
+    <!--Elementos-->
+    <nombre>Galletas Grandma Whitc</nombre>
+    <cantidad>
+        <porcion>1 Paquete</porcion>
+        <calorias>260 calorías</calorias>
+        <proteinas>5 gramos</proteinas>
+        <grasas>
+            <grasaCalorias>100 calorías</grasaCalorias>
+            <grasaGramos>11 gramos</grasaGramos>
+            <grasaSaturadas>2 gramos</grasaSaturadas>
+            <colesterol>5 miligramos</colesterol>
+        </grasas>
+        <carbohidratos>
+            <totales>36 gramos</totales>
+            <azucares>15 gramos</azucares>
+        </carbohidratos>
+        <fibra>2 gramos</fibra>
+        <sodio>210 miligramos</sodio>
+    </cantidad>
+
+</producto>

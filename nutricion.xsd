@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <!--Raíz-->
+    <element name="producto">
+        <complexType>
+            <sequence>
+                <!--Elemento nombre-->
+                <element name="nombre" type="string"/>
+                <!--Elemento cantidad-->
+                <element name="cantidad">
+                    <complexType>
+                        <sequence>
+                            
+                            <!--Porción, tiene caracteres-->
+                            <element name="porcion" type="string"/>
+                            
+                            <!--Elemento calorias-->
+                            <element name="calorias">
+                                <simpleType>
+                                    <!--restricciones-->
+                                    <restriction base="string">
+                                        <!--El contenido debe tener el patrón número + "calorías"
+                                        el signo "?" indica que es opcional la "s"-->
+                                        <pattern value="[0-9]+ calorías?"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <!--Fin del elemento calorias-->
+                            
+                            <!--Elemento proteinas-->
+                            <element name="proteinas">
+                                <simpleType>
+                                    <!--restricciones-->
+                                    <restriction base="string">
+                                        <!--El contenido debe tener el patrón número + "gramos"-->
+                                        <pattern value="[0-9]+ gramos?"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <!--Fin del elemento proteinas-->                            
+
+                            <!--Elemento grasas-->
+                            <element name="grasas">
+                                <complexType>
+                                    <sequence>
+                                        
+                                    <!--sub elementos del elemento grasas-->
+                                        
+                                        <!--Elemento grasaCalorias-->
+                                        <element name="grasaCalorias">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <pattern value="[0-9]+ calorías?"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <!--Fin del elemento grasaCalorias-->    
+
+                                        <!--Elemento grasaGramos-->
+                                        <element name="grasaGramos">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <pattern value="[0-9]+ gramos?"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <!--Fin del elemento grasaGramos-->
+                                        
+                                        <!--Elemento grasaSaturadas-->
+                                        <element name="grasaSaturadas">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <pattern value="[0-9]+ gramos?"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <!--Fin del elemento grasaSaturadas-->  
+
+                                        <!--Elemento colesterol-->
+                                        <element name="colesterol">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <pattern value="[0-9]+ miligramos?"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <!--Fin del elemento colesterol-->  
+
+                                    <!--fin de los sub elementos-->
+                                    
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <!--Fin del elemento grasas-->
+
+                            <!--Elemento carbohidratos-->
+                            <element name="carbohidratos">
+                                <complexType>
+                                    <sequence>
+                                        
+                                    <!--sub elementos del elemento carbohidratos-->
+                                        
+                                        <!--Elemento totales-->
+                                        <element name="totales">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <pattern value="[0-9]+ gramos?"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <!--Fin del elemento totales-->    
+
+                                        <!--Elemento azucares-->
+                                        <element name="azucares">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <pattern value="[0-9]+ gramos?"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <!--Fin del elemento azucares-->
+                                        
+                                    <!--fin de los sub elementos-->
+                                    
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <!--Fin del elemento carbohidratos-->
+
+                            <!--Elemento fibra-->
+                            <element name="fibra">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="[0-9]+ gramos?"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <!--Fin del elemento fibra-->
+
+                            <!--Elemento sodio-->
+                            <element name="sodio">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="[0-9]+ miligramos?"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <!--Fin del elemento sodio-->                            
+
+                        </sequence>
+                    </complexType>
+                </element>
+                <!--Fin del elemento cantidad-->
+            
+            </sequence>
+        </complexType>
+    </element>
+    <!--Fin de la Raíz-->
+</schema>
